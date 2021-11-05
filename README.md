@@ -67,9 +67,9 @@ iptables -t raw -I PREROUTING -p tcp --syn -j NFQUEUE --queue-num=1 --queue-bypa
 >
 > 
 >
-> - **--queue-balance** *value***:***value*
+> - **--queue-balance** *value*:*value*
 >
->   This specifies a range of queues to use. Packets are then balanced across the given queues. This is useful for multicore systems: start multiple instances of the userspace program on queues x, x+1, .. x+n and use "--queue-balance *x***:***x+n*". Packets belonging to the same connection are put into the same nfqueue.
+>   This specifies a range of queues to use. Packets are then balanced across the given queues. This is useful for multicore systems: start multiple instances of the userspace program on queues x, x+1, .. x+n and use "--queue-balance *x*:*x+n*". Packets belonging to the same connection are put into the same nfqueue.
 >
 > 
 >
